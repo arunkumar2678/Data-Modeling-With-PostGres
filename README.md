@@ -1,12 +1,24 @@
 # PostGresSQL - Python Project
 
-## Some websites referred for help
+# Introduction
+A startup called Sparkify wants to analyze the data they've been collecting on songs and user activity on their new music streaming app. The analytics team is particularly interested in understanding what songs users are listening to. Currently, they don't have an easy way to query their data, which resides in a directory of JSON logs on user activity on the app, as well as a directory with JSON metadata on the songs in their app. They'd like a data engineer to create a Postgres database with tables designed to optimize queries on song play analysis by creating a database schema and ETL pipeline for the analysis. 
 
-[Pandas](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html)
-[Converting Dictionary to List](https://stackoverflow.com/questions/1679384/converting-dictionary-to-list)
-[w3 school](www.w3schools.com)
+# Project Description
+In this project, we will need to define fact and dimension tables for a star schema for a particular analytic focus, and write an ETL pipeline that transfers data from files in two local directories into these tables in Postgres using Python and SQL.
+
+# Files
+* etl.py- Final ETL file.
+* create_tables.py - Python file creating database and tables.
+* sql_queries.py - contains all the queries.
+* test.ipynb - notbook to execute connection to DB and execute create and drop table statements.
+* etl_03232020.ipynb - coding for rough draft to be used for the final ETL file (etl.py)
+
+# Data output files
+Output of data pull of all the tables will be stored as xlsx files when the program is run and they are named with TableName.xlslx (songs.xlsx, artist.xlsx, users.xslx,time.xlsx, songplays.xlsx)
 
 etl.py - has the ETL process to load all the fact and dimension tables
+
+## Fact and Dimension Tables - Fields and data types
 
 |Artist Table | Data type | Is Null | Description|
 |-------------|-----------|----------|-----------|
@@ -54,14 +66,8 @@ level | varchar | not null | Level of the user
 |location | varchar | null | Location of song played|
 |useragent | varchar | null | User agent of the app|
 
-# Files
+## Some websites referred for help
 
-* etl.py- Final ETL file.
-* create_tables.py - Python file creating database and tables.
-* sql_queries.py - contains all the queries.
-* test.ipynb - notbook to execute connection to DB and execute create and drop table statements.
-* etl_03232020.ipynb - coding for rough draft to be used for the final ETL file (etl.py)
-
-# Data output files
-
-Output of data pull of all the tables will be stored as xlsx files when the program is run and they are named with TableName.xlslx (songs.xlsx, artist.xlsx, users.xslx,time.xlsx, songplays.xlsx)
+[Pandas](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html)
+[Converting Dictionary to List](https://stackoverflow.com/questions/1679384/converting-dictionary-to-list)
+[w3 school](www.w3schools.com)
